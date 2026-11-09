@@ -54,6 +54,35 @@
   if (search) search.addEventListener("input", applyFilter);
   if (category) category.addEventListener("change", applyFilter);
 
+  // Lightbox for links marked [data-lightbox]. Without JS (or <dialog> support)
+  // the link simply opens the full image.
+  var box = document.getElementById("lightbox");
+  if (box && typeof box.showModal === "function") {
+    var boxImg = box.querySelector(".lightbox-img");
+    var boxCap = box.querySelector(".lightbox-caption");
+    var lastTrigger = null;
+    document.querySelectorAll("a[data-lightbox]").forEach(function (link) {
+      link.addEventListener("click", function (ev) {
+        ev.preventDefault();
+        var img = link.querySelector("img");
+        var fig = link.closest("figure");
+        var cap = fig ? fig.querySelector("figcaption") : null;
+        boxImg.src = link.getAttribute("href");
+        boxImg.alt = img ? img.alt : "";
+        boxCap.textContent = cap ? cap.textContent.replace(/\s+/g, " ").trim() : "";
+        lastTrigger = link;
+        box.showModal();
+      });
+    });
+    box.querySelector(".lightbox-close").addEventListener("click", function () { box.close(); });
+    // Click on the backdrop closes it
+    box.addEventListener("click", function (ev) { if (ev.target === box) box.close(); });
+    box.addEventListener("close", function () {
+      boxImg.src = "";
+      if (lastTrigger) lastTrigger.focus();
+    });
+  }
+
   // Footer year
   var y = document.querySelector("[data-year]");
   if (y) y.textContent = new Date().getFullYear();

@@ -215,6 +215,43 @@ th { font-family: var(--font-mono); font-size: .75rem; text-transform: uppercase
 .split { display: grid; gap: 2rem; grid-template-columns: 1fr; }
 @media (min-width: 820px) { .split { grid-template-columns: 1fr 1fr; } }
 
+/* ---------- Secondary-material tag & note ---------- */
+.tag {
+  font-family: var(--font-mono); font-size: .72rem; text-transform: uppercase; letter-spacing: .12em;
+  border: 1px solid var(--rule-strong); padding: .2rem .5rem; font-weight: 700;
+}
+.note {
+  border-left: 4px solid var(--accent); background: var(--surface);
+  padding: 1rem 1.25rem; margin-bottom: 2rem; font-size: .95rem;
+}
+.note p { margin: 0; }
+
+/* ---------- Gallery ---------- */
+.gallery { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr)); }
+.gallery-item {
+  margin: 0; background: var(--surface); border: 1px solid var(--rule);
+  border-top: 3px solid var(--rule-strong); display: flex; flex-direction: column;
+}
+.gallery-item a { display: block; background: var(--bg-alt); border-bottom: 1px solid var(--rule); }
+.gallery-item img {
+  display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: top;
+}
+.gallery-item a:hover img { opacity: .85; }
+.gallery-item figcaption { padding: 1rem 1.25rem; font-size: .9rem; display: flex; flex-direction: column; gap: .35rem; }
+
+/* ---------- Lightbox ---------- */
+.lightbox {
+  border: 2px solid var(--rule-strong); background: var(--bg); color: var(--text);
+  padding: 1rem; max-width: min(95vw, 60rem); max-height: 95vh; width: 100%;
+}
+.lightbox::backdrop { background: rgba(0,0,0,.85); }
+.lightbox-img { display: block; max-width: 100%; max-height: 75vh; margin: 0 auto; }
+.lightbox-caption { margin: .75rem 0 0; font-size: .9rem; color: var(--text-muted); max-width: none; }
+.lightbox-close {
+  display: block; margin: 0 0 .75rem auto; font: inherit; font-size: .85rem; cursor: pointer;
+  background: var(--text); color: var(--bg); border: 0; padding: .45rem .8rem;
+}
+
 /* ---------- Footer ---------- */
 .site-footer { padding: 3rem 0; font-size: .9rem; color: var(--text-muted); border-top: 2px solid var(--rule-strong); }
 .footer-grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); }
