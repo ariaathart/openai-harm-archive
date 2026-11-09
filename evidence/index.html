@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Evidence — [Site Title]</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-title" href="../">[Site Title]</a>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button">Dark mode</button>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      </div>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="../">Home</a></li>
+          <li><a href="../evidence/" aria-current="page">Evidence</a></li>
+          <li><a href="../timeline/">Timeline</a></li>
+          <li><a href="../documents/">Documents</a></li>
+          <li><a href="../sources/">Sources</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Section</p>
+        <h1>Evidence</h1>
+        <div class="placeholder"><p>Introduction to the evidence index: what qualifies as an evidence item and how items are verified.</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="filter-bar" role="search">
+          <label>Search evidence
+            <input type="search" data-filter-search placeholder="Filter by keyword">
+          </label>
+          <label>Category
+            <select data-filter-category>
+              <option value="">All categories</option>
+              <option value="category-a">[Category A]</option>
+              <option value="category-b">[Category B]</option>
+            </select>
+          </label>
+        </div>
+
+        <!--
+          EVIDENCE ITEM TEMPLATE — copy one <article> per item.
+          Required: id, title, date, category, original source URL, archived copy URL.
+          data-search: keywords used by the filter. data-category: matches a <select> option value.
+        -->
+        <div class="grid" data-filter-list>
+          <article class="card" id="ev-0001" data-search="[keywords]" data-category="category-a">
+            <p class="card-meta">EV-0001 · [Category A] · [YYYY-MM-DD]</p>
+            <h3>[Evidence item title]</h3>
+            <div class="placeholder"><p>Neutral summary of what the source shows.</p></div>
+            <div class="card-links">
+              <span>[Original source — URL]</span>
+              <span>[Archived copy — URL]</span>
+            </div>
+          </article>
+          <article class="card" id="ev-0002" data-search="[keywords]" data-category="category-b">
+            <p class="card-meta">EV-0002 · [Category B] · [YYYY-MM-DD]</p>
+            <h3>[Evidence item title]</h3>
+            <div class="placeholder"><p>Neutral summary of what the source shows.</p></div>
+            <div class="card-links">
+              <span>[Original source — URL]</span>
+              <span>[Archived copy — URL]</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span data-year></span> [Owner] · [License] · <a href="../sources/">Sources &amp; methodology</a></p>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

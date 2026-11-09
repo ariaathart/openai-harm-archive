@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sources — [Site Title]</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-title" href="../">[Site Title]</a>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button">Dark mode</button>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      </div>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="../">Home</a></li>
+          <li><a href="../evidence/">Evidence</a></li>
+          <li><a href="../timeline/">Timeline</a></li>
+          <li><a href="../documents/">Documents</a></li>
+          <li><a href="../sources/" aria-current="page">Sources</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Section</p>
+        <h1>Sources &amp; methodology</h1>
+        <div class="placeholder"><p>Introduction to the source list and the editorial method.</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div>
+          <h2>Methodology</h2>
+          <div class="placeholder"><p>Sourcing standards, verification steps, and how archived copies are made (e.g. web archive service used).</p></div>
+        </div>
+        <div>
+          <h2>Corrections policy</h2>
+          <div class="placeholder"><p>How errors are reported, reviewed, and logged.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section-head"><h2>Source list</h2></div>
+        <!--
+          SOURCE ROW TEMPLATE — one <tr> per source.
+          Always record both the original URL and an archived copy URL, plus date accessed.
+        -->
+        <div class="table-wrap">
+          <table>
+            <caption class="visually-hidden">Sources</caption>
+            <thead>
+              <tr><th scope="col">ID</th><th scope="col">Source</th><th scope="col">Publisher</th><th scope="col">Published</th><th scope="col">Accessed</th><th scope="col">Original</th><th scope="col">Archived</th></tr>
+            </thead>
+            <tbody>
+              <tr id="src-0001">
+                <td>SRC-0001</td><td>[Title]</td><td>[Publisher]</td><td>[YYYY-MM-DD]</td><td>[YYYY-MM-DD]</td><td>[URL]</td><td>[Archive URL]</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span data-year></span> [Owner] · [License] · <a href="../sources/">Sources &amp; methodology</a></p>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

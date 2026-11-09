@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Documents — [Site Title]</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-title" href="../">[Site Title]</a>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button">Dark mode</button>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      </div>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="../">Home</a></li>
+          <li><a href="../evidence/">Evidence</a></li>
+          <li><a href="../timeline/">Timeline</a></li>
+          <li><a href="../documents/" aria-current="page">Documents</a></li>
+          <li><a href="../sources/">Sources</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Section</p>
+        <h1>Documents</h1>
+        <div class="placeholder"><p>Introduction to the document archive: file types held, provenance standards, and how to cite them.</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="filter-bar" role="search">
+          <label>Search documents
+            <input type="search" data-filter-search placeholder="Filter by keyword">
+          </label>
+        </div>
+        <!--
+          DOCUMENT ROW TEMPLATE — one <tr> per file.
+          Store files in /documents/files/ (create when first needed) and link relatively: files/DOC-0001.pdf
+        -->
+        <div class="table-wrap">
+          <table data-filter-list>
+            <caption class="visually-hidden">Archived documents</caption>
+            <thead>
+              <tr><th scope="col">ID</th><th scope="col">Title</th><th scope="col">Date</th><th scope="col">Type</th><th scope="col">Original source</th><th scope="col">Download</th></tr>
+            </thead>
+            <tbody>
+              <tr id="doc-0001" data-search="[keywords]">
+                <td>DOC-0001</td><td>[Document title]</td><td>[YYYY-MM-DD]</td><td>[PDF]</td><td>[URL]</td><td>[File link]</td>
+              </tr>
+              <tr id="doc-0002" data-search="[keywords]">
+                <td>DOC-0002</td><td>[Document title]</td><td>[YYYY-MM-DD]</td><td>[PDF]</td><td>[URL]</td><td>[File link]</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span data-year></span> [Owner] · [License] · <a href="../sources/">Sources &amp; methodology</a></p>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

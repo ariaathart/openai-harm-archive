@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Timeline — [Site Title]</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-title" href="../">[Site Title]</a>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button">Dark mode</button>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      </div>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="../">Home</a></li>
+          <li><a href="../evidence/">Evidence</a></li>
+          <li><a href="../timeline/" aria-current="page">Timeline</a></li>
+          <li><a href="../documents/">Documents</a></li>
+          <li><a href="../sources/">Sources</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Section</p>
+        <h1>Timeline</h1>
+        <div class="placeholder"><p>Introduction to the timeline: date range covered and how events are selected.</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <!--
+          TIMELINE ENTRY TEMPLATE — one <li> per event, oldest first.
+          Use <time datetime="YYYY-MM-DD">. Link each event to a source and/or evidence item (../evidence/#ev-XXXX).
+        -->
+        <ol class="timeline">
+          <li id="t-0001">
+            <time datetime="">[YYYY-MM-DD]</time>
+            <h3>[Event title]</h3>
+            <div class="placeholder"><p>Event description.</p></div>
+            <p class="card-meta">Source: [URL] · Related evidence: [EV-XXXX]</p>
+          </li>
+          <li id="t-0002">
+            <time datetime="">[YYYY-MM-DD]</time>
+            <h3>[Event title]</h3>
+            <div class="placeholder"><p>Event description.</p></div>
+            <p class="card-meta">Source: [URL] · Related evidence: [EV-XXXX]</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span data-year></span> [Owner] · [License] · <a href="../sources/">Sources &amp; methodology</a></p>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>
