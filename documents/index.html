@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Documents — [Site Title]</title>
+  <title>Documents — OpenAI Harm Archive</title>
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="site-title" href="../">[Site Title]</a>
+      <a class="site-title" href="../">OPENAI HARM ARCHIVE</a>
       <div class="header-actions">
         <button class="theme-toggle" type="button">Dark mode</button>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
@@ -32,11 +32,47 @@
       <div class="container">
         <p class="eyebrow">Section</p>
         <h1>Documents</h1>
-        <div class="placeholder"><p>Introduction to the document archive: file types held, provenance standards, and how to cite them.</p></div>
+        <p class="intro-text">This section collects archival records, reports and other substantial documents referenced throughout the site. Each entry identifies its source and provenance so readers can inspect the underlying material directly.</p>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section section--alt" aria-labelledby="featured-title">
+      <div class="container">
+        <div class="section-head"><h2 id="featured-title">Featured documents</h2></div>
+        <div class="doc-feature-grid">
+          <article class="doc-feature" id="doc-0001">
+            <div class="src-meta">
+              <span class="tag">Preservation record / community archival document</span>
+              <span class="src-type">Hosted record · Zenodo · DOC-0001</span>
+            </div>
+            <h3>GPT-4o Preservation Record</h3>
+            <p>Archived public preservation record documenting community requests for GPT-4o preservation, signatures, quoted reasons, supporting material and the request for archival/open-weight release.</p>
+            <div class="src-links">
+              <a class="btn btn--small" href="https://zenodo.org/records/23454073">Open on Zenodo</a>
+              <a class="btn btn--small btn--ghost" href="../sources/#src-0004">Source entry</a>
+            </div>
+          </article>
+          <article class="doc-feature" id="doc-0002">
+            <div class="src-meta">
+              <span class="tag">Accessibility research</span>
+              <span class="src-type">Report (PDF) · DOC-0002</span>
+            </div>
+            <h3>GPT-4o Accessibility Impact Survey</h3>
+            <p>Structured accessibility-impact research examining how people with disabilities, chronic illness, neurodivergence and mental-health conditions reported using GPT-4o, changes in functioning during stable access, and the effects of routing or attempted substitution.</p>
+            <div class="src-links">
+              <a class="btn btn--small" href="https://sd-research.github.io/4o-accessibility-impacts/GPT-4o_Accessibility_Impacts_Report.pdf">Open report (PDF)</a>
+              <a class="btn btn--small btn--ghost" href="https://github.com/sd-research/4o-accessibility-impacts">Analysis &amp; materials</a>
+              <a class="btn btn--small btn--ghost" href="https://x.com/Sophty_/status/2019922511497212233">Announcement post</a>
+              <a class="btn btn--small btn--ghost" href="../sources/#src-0002">Source entry</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOCUMENT INDEX: temporarily hidden with the `hidden` attribute until the archive holds
+         enough documents for a searchable catalogue. To restore, delete `hidden` below. -->
+    <section class="section" hidden>
       <div class="container">
         <div class="filter-bar" role="search">
           <label>Search documents
@@ -54,10 +90,10 @@
               <tr><th scope="col">ID</th><th scope="col">Title</th><th scope="col">Date</th><th scope="col">Type</th><th scope="col">Original source</th><th scope="col">Download</th></tr>
             </thead>
             <tbody>
-              <tr id="doc-0001" data-search="[keywords]">
+              <tr id="doc-template-1" data-search="[keywords]">
                 <td>DOC-0001</td><td>[Document title]</td><td>[YYYY-MM-DD]</td><td>[PDF]</td><td>[URL]</td><td>[File link]</td>
               </tr>
-              <tr id="doc-0002" data-search="[keywords]">
+              <tr id="doc-template-2" data-search="[keywords]">
                 <td>DOC-0002</td><td>[Document title]</td><td>[YYYY-MM-DD]</td><td>[PDF]</td><td>[URL]</td><td>[File link]</td>
               </tr>
             </tbody>
@@ -69,7 +105,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>© <span data-year></span> [Owner] · [License] · <a href="../sources/">Sources &amp; methodology</a></p>
+      <p>Independent public archive. Not affiliated with or endorsed by OpenAI. · Last updated: 10 November 2026 · <a href="../sources/">Sources &amp; methodology</a></p>
     </div>
   </footer>
   <script src="../assets/js/main.js" defer></script>

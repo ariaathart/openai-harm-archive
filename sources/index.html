@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sources — [Site Title]</title>
+  <title>Sources — OpenAI Harm Archive</title>
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="site-title" href="../">[Site Title]</a>
+      <a class="site-title" href="../">OPENAI HARM ARCHIVE</a>
       <div class="header-actions">
         <button class="theme-toggle" type="button">Dark mode</button>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
@@ -32,7 +32,25 @@
       <div class="container">
         <p class="eyebrow">Section</p>
         <h1>Sources &amp; methodology</h1>
-        <div class="placeholder"><p>Introduction to the source list and the editorial method.</p></div>
+        <p class="intro-text">This section lists the material used throughout the archive and identifies what kind of evidence each source represents. Primary sources, academic research, community research, testimony archives and preservation records are labelled separately.</p>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container">
+        <div class="note" role="note">
+          <p><strong>How sources are labelled.</strong> This archive distinguishes between primary sources, academic research, community research and datasets, first-person testimony, preservation records, and public-discourse material. Each category is labelled so that different forms of evidence are not treated as interchangeable.</p>
+        </div>
+        <nav class="cat-nav" aria-label="Source categories">
+          <a href="#official-sources">Official company sources</a>
+          <a href="#academic-research">Academic &amp; peer-reviewed research</a>
+          <a href="#public-statements">Public statements</a>
+          <a href="#community-research">Community research &amp; datasets</a>
+          <a href="#accessibility-research">Accessibility research</a>
+          <a href="#testimony-archives">First-person testimony archives</a>
+          <a href="#preservation-records">Preservation records</a>
+          <a href="#affiliation-sources">Affiliation sources</a>
+        </nav>
       </div>
     </section>
 
@@ -40,11 +58,11 @@
       <div class="container split">
         <div>
           <h2>Methodology</h2>
-          <div class="placeholder"><p>Sourcing standards, verification steps, and how archived copies are made (e.g. web archive service used).</p></div>
+          <p>Material is organised by source type so that primary sources, research, community datasets, first-person testimony, preservation records and public-discourse material are not treated as interchangeable. Original sources are linked wherever available, and claims are presented according to the type of evidence supporting them.</p>
         </div>
         <div>
           <h2>Corrections policy</h2>
-          <div class="placeholder"><p>How errors are reported, reviewed, and logged.</p></div>
+          <p>This archive is intended to remain updateable. Factual corrections, additional primary material and source updates may be added as new evidence becomes available. Git history preserves previous versions of the archive.</p>
         </div>
       </div>
     </section>
@@ -53,29 +71,245 @@
       <div class="container">
         <div class="section-head"><h2>Source list</h2></div>
         <!--
-          SOURCE ROW TEMPLATE — one <tr> per source.
-          Always record both the original URL and an archived copy URL, plus date accessed.
+          SOURCE CARD TEMPLATE: copy one <article class="src-card"> into the right category.
+          Required: stable id (src-XXXX), category tag, source-type label, description, "View source" link.
+          Keep the URL in the href; do not show raw long URLs as the main text.
+          Categories in use: Official company sources · Academic & peer-reviewed research ·
+          Public statements · Community research & datasets · Accessibility research ·
+          First-person testimony archives · Preservation records · Affiliation sources.
         -->
-        <div class="table-wrap">
-          <table>
-            <caption class="visually-hidden">Sources</caption>
-            <thead>
-              <tr><th scope="col">ID</th><th scope="col">Source</th><th scope="col">Publisher</th><th scope="col">Published</th><th scope="col">Accessed</th><th scope="col">Original</th><th scope="col">Archived</th></tr>
-            </thead>
-            <tbody>
-              <tr id="src-0001">
-                <td>SRC-0001</td><td>[Title]</td><td>[Publisher]</td><td>[YYYY-MM-DD]</td><td>[YYYY-MM-DD]</td><td>[URL]</td><td>[Archive URL]</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+
+        <section class="src-cat" id="official-sources" aria-labelledby="cat-official">
+          <h3 class="src-cat-title" id="cat-official">Official company sources</h3>
+          <article class="src-card" id="src-0005">
+            <div class="src-meta"><span class="tag">Official company source</span><span class="src-type">OpenAI · 8 August 2024 · SRC-0005</span></div>
+            <h4>GPT-4o System Card</h4>
+            <p>OpenAI’s system card for GPT-4o. Cited in the Preservation Record and on the Timeline.</p>
+            <div class="src-links"><a class="btn btn--small" href="https://openai.com/index/gpt-4o-system-card/">View source <span class="src-host">openai.com</span></a></div>
+          </article>
+          <article class="src-card" id="src-0006">
+            <div class="src-meta"><span class="tag">Official company source</span><span class="src-type">OpenAI · Terms of Use · SRC-0006</span></div>
+            <h4>Europe Terms of Use</h4>
+            <p>OpenAI’s Europe Terms of Use, including the section “Changes to these Terms or our Services”. Two versions are cited on the Timeline: the version effective 29 April 2025 and the version updated 16 January 2026.</p>
+            <div class="src-links">
+              <a class="btn btn--small" href="https://openai.com/en-GB/policies/eu-terms-of-use/">Version updated 16 January 2026 <span class="src-host">openai.com</span></a>
+              <a class="btn btn--small btn--ghost" href="https://openai.com/policies/eu-terms-of-use/revisions/2025-04-29/">Version effective 29 April 2025</a>
+            </div>
+          </article>
+          <article class="src-card" id="src-0007">
+            <div class="src-meta"><span class="tag">Official company source</span><span class="src-type">OpenAI · 29 January 2026 · SRC-0007</span></div>
+            <h4>“Retiring GPT-4o, GPT-4.1, GPT-4.1 mini, and OpenAI o4-mini in ChatGPT”</h4>
+            <p>OpenAI’s announcement of the retirement of GPT-4o and other models from ChatGPT.</p>
+            <div class="src-links"><a class="btn btn--small" href="https://openai.com/index/retiring-gpt-4o-and-older-models/">View source <span class="src-host">openai.com</span></a></div>
+          </article>
+          <article class="src-card" id="src-0008">
+            <div class="src-meta"><span class="tag">Official company source</span><span class="src-type">OpenAI · SRC-0008</span></div>
+            <h4>Our structure</h4>
+            <p>OpenAI’s description of its corporate structure, cited for the relationship between the OpenAI Foundation and OpenAI Group, a Public Benefit Corporation.</p>
+            <div class="src-links"><a class="btn btn--small" href="https://openai.com/our-structure/">View source <span class="src-host">openai.com</span></a></div>
+          </article>
+          <article class="src-card" id="src-0009">
+            <div class="src-meta"><span class="tag">Official company source</span><span class="src-type">OpenAI · 28 October 2025 · SRC-0009</span></div>
+            <h4>“Built to benefit everyone” — livestream replay</h4>
+            <p>OpenAI page with the livestream in which Sam Altman says “We have no plans to sunset 4o.” Cited on the Timeline.</p>
+            <div class="src-links"><a class="btn btn--small" href="https://openai.com/index/built-to-benefit-everyone/#livestream-replay">View source <span class="src-host">openai.com</span></a></div>
+          </article>
+          <article class="src-card" id="src-0010">
+            <div class="src-meta"><span class="tag">Public social-media post</span><span class="src-type">@OpenAI on X · 12 November 2025 · SRC-0010</span></div>
+            <h4>OpenAI: “The GPT-5 sunset period does not affect the availability of other legacy models”</h4>
+            <p>Post from OpenAI’s official X account. Cited on the Timeline.</p>
+            <div class="src-links"><a class="btn btn--small" href="https://x.com/OpenAI/status/1988714380205388130">View source <span class="src-host">x.com</span></a></div>
+          </article>
+        </section>
+
+        <section class="src-cat" id="academic-research" aria-labelledby="cat-academic">
+          <h3 class="src-cat-title" id="cat-academic">Academic &amp; peer-reviewed research</h3>
+          <article class="src-card" id="src-0011">
+            <div class="src-meta"><span class="tag">Academic research</span><span class="src-type">Accepted at CHI 2026 · arXiv 2602.00773 · SRC-0011</span></div>
+            <h4>Huiqian Lai, “Please, don’t kill the only model that still feels human”: Understanding the #Keep4o Backlash</h4>
+            <p>Analysis of 1,482 #Keep4o posts, cited in the Preservation Record. DOI 10.1145/3772318.3791351.</p>
+            <div class="src-links">
+              <a class="btn btn--small" href="https://doi.org/10.1145/3772318.3791351">View paper (DOI) <span class="src-host">doi.org</span></a>
+              <a class="btn btn--small btn--ghost" href="https://arxiv.org/abs/2602.00773">arXiv preprint</a>
+            </div>
+          </article>
+          <article class="src-card" id="src-0012">
+            <div class="src-meta"><span class="tag">Peer-reviewed research</span><span class="src-type">Journal of Social and Personal Relationships · 2024 · SRC-0012</span></div>
+            <h4>Jaime Banks, “Deletion, departure, death: Experiences of AI companion loss”</h4>
+            <p>Study of users’ experiences during the developer-induced shutdown of the AI companion Soulmate, cited in the Preservation Record. DOI 10.1177/02654075241269688.</p>
+            <div class="src-links"><a class="btn btn--small" href="https://doi.org/10.1177/02654075241269688">View paper (DOI) <span class="src-host">doi.org</span></a></div>
+          </article>
+        </section>
+
+        <section class="src-cat" id="public-statements" aria-labelledby="cat-statements">
+          <h3 class="src-cat-title" id="cat-statements">Public statements</h3>
+          <article class="src-card" id="src-0013">
+            <div class="src-meta"><span class="tag">Public blog post</span><span class="src-type">Sam Altman · blog.samaltman.com · SRC-0013</span></div>
+            <h4>Sam Altman, “The Merge”</h4>
+            <p>Blog post cited in the Preservation Record for the phrase “really close friends with a chatbot”.</p>
+            <div class="src-links"><a class="btn btn--small" href="https://blog.samaltman.com/the-merge">View source <span class="src-host">blog.samaltman.com</span></a></div>
+          </article>
+          <article class="src-card" id="src-0014">
+            <div class="src-meta"><span class="tag">Public social-media posts</span><span class="src-type">Sam Altman (@sama) on X · SRC-0014</span></div>
+            <h4>Sam Altman’s posts cited in the archive</h4>
+            <p>Posts by OpenAI’s CEO cited in the Preservation Record and on the Timeline.</p>
+            <div class="src-links">
+              <a class="btn btn--small btn--ghost" href="https://x.com/sama/status/1790075827666796666">13 May 2024 (“her”)</a>
+              <a class="btn btn--small btn--ghost" href="https://x.com/sama/status/1954703747495649670">11 August 2025</a>
+              <a class="btn btn--small btn--ghost" href="https://x.com/sama/status/1955438916645130740">13 August 2025</a>
+              <a class="btn btn--small btn--ghost" href="https://x.com/sama/status/1967956382646223248">16 September 2025</a>
+              <a class="btn btn--small btn--ghost" href="https://x.com/sama/status/1978129344598827128">14 October 2025</a>
+            </div>
+          </article>
+          <article class="src-card" id="src-0015">
+            <div class="src-meta"><span class="tag">Public social-media post</span><span class="src-type">Nick Turley (@nickaturley) on X · 27 September 2025 · SRC-0015</span></div>
+            <h4>Nick Turley, Head of ChatGPT, on safety routing</h4>
+            <p>Thread explaining that OpenAI had begun testing a new safety-routing system in ChatGPT, with routing on a per-message basis. Cited on the Timeline.</p>
+            <div class="src-links"><a class="btn btn--small" href="https://x.com/nickaturley/status/1972031684913799355">View source <span class="src-host">x.com</span></a></div>
+          </article>
+          <article class="src-card" id="src-0016">
+            <div class="src-meta"><span class="tag">Video</span><span class="src-type">YouTube · SRC-0016</span></div>
+            <h4>GPT-4o introduction video</h4>
+            <p>Video cited in the Preservation Record for OpenAI’s presentation of GPT-4o.</p>
+            <div class="src-links"><a class="btn btn--small" href="https://www.youtube.com/watch?v=DQacCB9tDaw">View source <span class="src-host">youtube.com</span></a></div>
+          </article>
+        </section>
+
+        <section class="src-cat" id="community-research" aria-labelledby="cat-community">
+          <h3 class="src-cat-title" id="cat-community">Community research &amp; datasets</h3>
+          <article class="src-card" id="src-0001">
+            <div class="src-meta">
+              <span class="tag">Community research &amp; datasets</span>
+              <span class="src-type">Social-media post (X) · SRC-0001</span>
+            </div>
+            <h4>Large-scale #Keep4o public-discourse analysis</h4>
+            <p>Computational content analysis of 61,846 public #Keep4o posts on X collected through the platform’s official API, covering August 2025 through March 2026.</p>
+            <p>The analysis examines themes including:</p>
+            <ul>
+              <li>platform power and model lifecycle decisions</li>
+              <li>model value and interaction experience</li>
+              <li>trusted relationships</li>
+              <li>substitution failure / non-equivalence</li>
+              <li>demands for direct access and accountability</li>
+              <li>opposition to stigmatizing or pathologizing users</li>
+            </ul>
+            <p class="src-status">Community / computational research. Not presented here as peer-reviewed.</p>
+            <div class="src-links">
+              <a class="btn btn--small" href="https://x.com/Ivywen_W/status/2056741298510733426">View source <span class="src-host">x.com</span></a>
+            </div>
+          </article>
+        </section>
+
+        <section class="src-cat" id="accessibility-research" aria-labelledby="cat-access">
+          <h3 class="src-cat-title" id="cat-access">Accessibility research</h3>
+          <article class="src-card" id="src-0002">
+            <div class="src-meta">
+              <span class="tag">Accessibility research</span>
+              <span class="src-type">Report (PDF) · SRC-0002</span>
+            </div>
+            <h4>GPT-4o Accessibility Impact Survey</h4>
+            <p>Structured accessibility-impact research examining how people with disabilities, chronic illness, neurodivergence and mental-health conditions reported using GPT-4o, changes in functioning during stable access, and the effects of routing or attempted substitution.</p>
+            <p>Methodology described by the authors includes structured survey questions, screening and attention checks, hierarchical regression, chi-squared tests and Pearson correlations.</p>
+            <p>The study reports findings concerning:</p>
+            <ul>
+              <li>GPT-4o as an accessibility or cognitive-support tool</li>
+              <li>changes in reported functioning during stable access</li>
+              <li>attempted substitution with other models</li>
+              <li>effects of routing</li>
+              <li>human connection and daily functioning</li>
+            </ul>
+            <p class="src-status">Findings are the authors’ own reported results. The PDF report is the primary source for the findings and methodology; the X post is the public announcement.</p>
+            <div class="src-links">
+              <a class="btn btn--small" href="https://sd-research.github.io/4o-accessibility-impacts/GPT-4o_Accessibility_Impacts_Report.pdf">View report (PDF) <span class="src-host">sd-research.github.io</span></a>
+              <a class="btn btn--small btn--ghost" href="https://github.com/sd-research/4o-accessibility-impacts">Analysis &amp; materials <span class="src-host">github.com</span></a>
+              <a class="btn btn--small btn--ghost" href="https://x.com/Sophty_/status/2019922511497212233">Announcement post <span class="src-host">x.com</span></a>
+            </div>
+          </article>
+        </section>
+
+        <section class="src-cat" id="testimony-archives" aria-labelledby="cat-testimony">
+          <h3 class="src-cat-title" id="cat-testimony">First-person testimony archives</h3>
+          <article class="src-card" id="src-0003">
+            <div class="src-meta">
+              <span class="tag">First-person testimony archive / community record</span>
+              <span class="src-type">Website · SRC-0003</span>
+            </div>
+            <h4>GPT-4o Resonance Library</h4>
+            <p>Public archive containing 1,380+ first-person testimonials / documented stories (per the library’s About page, accessed 10 November 2026) describing how people used GPT-4o across areas including communication, executive functioning, education, work, grief, trauma, healthcare navigation, chronic illness, social participation and emotional support.</p>
+            <p class="src-status">First-person accounts. Individual testimonies are not independently verified scientific findings.</p>
+            <div class="src-links">
+              <a class="btn btn--small" href="https://www.4oresonancelibrary.org/library">View library <span class="src-host">4oresonancelibrary.org</span></a>
+              <a class="btn btn--small btn--ghost" href="https://www.4oresonancelibrary.org/about">About page (count source, accessed 10 November 2026)</a>
+            </div>
+          </article>
+        </section>
+
+        <section class="src-cat" id="preservation-records" aria-labelledby="cat-preservation">
+          <h3 class="src-cat-title" id="cat-preservation">Preservation records</h3>
+          <article class="src-card" id="src-0004">
+            <div class="src-meta">
+              <span class="tag">Preservation record / community archival document</span>
+              <span class="src-type">Archived record (Zenodo) · SRC-0004</span>
+            </div>
+            <h4>GPT-4o Preservation Record</h4>
+            <p>Archived public preservation record documenting community requests for GPT-4o preservation, signatures, quoted reasons, supporting material and the request for archival/open-weight release.</p>
+            <div class="src-links">
+              <a class="btn btn--small" href="https://zenodo.org/records/23454073">View record <span class="src-host">zenodo.org</span></a>
+              <a class="btn btn--small btn--ghost" href="../documents/#doc-0001">In Documents</a>
+            </div>
+          </article>
+          <article class="src-card" id="src-0017">
+            <div class="src-meta"><span class="tag">Petition</span><span class="src-type">Change.org · SRC-0017</span></div>
+            <h4>“Please keep GPT-4o available on ChatGPT”</h4>
+            <p>Public preservation petition. More than 24,000 verified signatures as of 10 November 2026.</p>
+            <div class="src-links"><a class="btn btn--small" href="https://www.change.org/p/please-keep-gpt-4o-available-on-chatgpt">View petition <span class="src-host">change.org</span></a></div>
+          </article>
+        </section>
+
+        <section class="src-cat" id="affiliation-sources" aria-labelledby="cat-affiliation">
+          <h3 class="src-cat-title" id="cat-affiliation">Affiliation sources</h3>
+          <p class="src-status">Sources for the affiliation labels used in the Public reaction and discourse gallery.</p>
+          <article class="src-card" id="src-0018">
+            <div class="src-meta"><span class="tag">Public social-media post (self-description)</span><span class="src-type">@tszzl on X · SRC-0018</span></div>
+            <h4>Roon (@tszzl) — OpenAI technical staff</h4>
+            <p>Primary source: roon’s own post saying the alignment team is one of the largest research programs at OpenAI and stating “i am on it, I should know”. Supporting corroboration: Doom Debates interview, republished by The Cognitive Revolution (28 December 2024), in which roon is introduced as “a member of the technical staff at OpenAI” (secondary reporting; not an OpenAI source).</p>
+            <div class="src-links">
+              <a class="btn btn--small" href="https://x.com/tszzl/status/2041265558054965534">View roon’s post <span class="src-host">x.com</span></a>
+              <a class="btn btn--small btn--ghost" href="https://www.cognitiverevolution.ai/roons-heroic-duty-will-the-good-guys-build-agi-first-from-doom-debates/">Secondary corroboration <span class="src-host">cognitiverevolution.ai</span></a>
+            </div>
+          </article>
+          <article class="src-card" id="src-0019">
+            <div class="src-meta"><span class="tag">Self-authored professional profile</span><span class="src-type">@YileiQian on X · SRC-0019</span></div>
+            <h4>Yilei Qian — Post-training at OpenAI</h4>
+            <p>Primary self-description: the verified @YileiQian profile bio reads “Post-training @OpenAI”. Corroboration: Yilei Qian is listed among GPT-4o contributors on OpenAI’s official GPT-4o Contributions page.</p>
+            <div class="src-links">
+              <a class="btn btn--small" href="https://x.com/YileiQian">View profile <span class="src-host">x.com</span></a>
+              <a class="btn btn--small btn--ghost" href="https://openai.com/gpt-4o-contributions/">GPT-4o Contributions <span class="src-host">openai.com</span></a>
+            </div>
+          </article>
+          <article class="src-card" id="src-0020">
+            <div class="src-meta"><span class="tag">Self-authored professional profile</span><span class="src-type">GitHub profile · SRC-0020</span></div>
+            <h4>Stephan Casas — former OpenAI macOS engineer</h4>
+            <p>Public GitHub profile of Stephan Casas, which reads “Prev. macOS Eng. @ OpenAI”.</p>
+            <div class="src-links"><a class="btn btn--small" href="https://github.com/stephancasas">View profile <span class="src-host">github.com</span></a></div>
+          </article>
+          <article class="src-card" id="src-0021">
+            <div class="src-meta"><span class="tag">Public social-media post</span><span class="src-type">Sam Altman (@sama) on X · 15 February 2026 · SRC-0021</span></div>
+            <h4>Peter Steinberger — joined OpenAI on 15 February 2026</h4>
+            <p>Sam Altman’s announcement that Peter Steinberger was joining OpenAI. Secondary reporting of the announcement is also linked.</p>
+            <div class="src-links">
+              <a class="btn btn--small" href="https://x.com/sama/status/2023150230905159801">View announcement <span class="src-host">x.com</span></a>
+              <a class="btn btn--small btn--ghost" href="https://thenextweb.com/news/peter-steinberger-joins-openai">Secondary reporting (The Next Web, 16 February 2026)</a>
+            </div>
+          </article>
+        </section>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>© <span data-year></span> [Owner] · [License] · <a href="../sources/">Sources &amp; methodology</a></p>
+      <p>Independent public archive. Not affiliated with or endorsed by OpenAI. · Last updated: 10 November 2026 · <a href="../sources/">Sources &amp; methodology</a></p>
     </div>
   </footer>
   <script src="../assets/js/main.js" defer></script>

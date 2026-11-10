@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Timeline — [Site Title]</title>
+  <title>Timeline — OpenAI Harm Archive</title>
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="site-title" href="../">[Site Title]</a>
+      <a class="site-title" href="../">OPENAI HARM ARCHIVE</a>
       <div class="header-actions">
         <button class="theme-toggle" type="button">Dark mode</button>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
@@ -31,38 +31,173 @@
     <section class="page-hero">
       <div class="container">
         <p class="eyebrow">Section</p>
-        <h1>Timeline</h1>
-        <div class="placeholder"><p>Introduction to the timeline: date range covered and how events are selected.</p></div>
-      </div>
+        <h1>Timeline</h1>      </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <!--
-          TIMELINE ENTRY TEMPLATE — one <li> per event, oldest first.
-          Use <time datetime="YYYY-MM-DD">. Link each event to a source and/or evidence item (../evidence/#ev-XXXX).
-        -->
-        <ol class="timeline">
-          <li id="t-0001">
-            <time datetime="">[YYYY-MM-DD]</time>
-            <h3>[Event title]</h3>
-            <div class="placeholder"><p>Event description.</p></div>
-            <p class="card-meta">Source: [URL] · Related evidence: [EV-XXXX]</p>
+    <!--
+      APPROVED COPY: each element marked data-t is one line of timeline_and_request_exact.txt, verbatim
+      (lines 33–136; lines 1–31 are on the homepage #request). One sentence was deleted on instruction.
+      Figure captions and "Exhibit" labels (no data-t) are editorial additions.
+      TIMELINE ENTRY TEMPLATE: copy one <li class="tl-item"> per event, oldest first; datetime="YYYY-MM-DD".
+    -->
+    <section class="section record" id="documented-record" aria-labelledby="record-title">
+      <div class="container record-body">
+        <h2 id="record-title"><span class="ln" data-t>The Documented Record: </span></h2>
+        <p class="record-intro"><span class="ln" data-t>OpenAI's public commitments on GPT-4o were each followed by the action they ruled out. </span></p>
+
+        <figure class="fig fig--exhibit fig--wide">
+          <p class="exhibit-label">Exhibit · Public statements</p>
+          <a href="../assets/images/timeline/04_public_commitments_collage.jpg" data-lightbox>
+            <img src="../assets/images/timeline/04_public_commitments_collage.jpg" loading="lazy"
+                 alt="Collage of public statements. A post by Sam Altman dated Aug 11, 2025 with the words &ldquo;suddenly deprecating old models that users depended on in their workflows was a mistake&rdquo; underlined. A post by Sam Altman dated Aug 13, 2025 with &ldquo;4o is back in the model picker for all paid users by default. If we ever do deprecate it, we will give plenty of notice&rdquo; underlined. A post by @OpenAI dated Nov 12, 2025 with &ldquo;The GPT-5 sunset period does not affect the availability of other legacy models&rdquo; boxed. A post by Sam Altman timestamped 6:02 PM Oct 14, 2025 beginning &ldquo;We made ChatGPT pretty restrictive to make sure we were being careful with mental health issues.&rdquo; A video still with the subtitle &ldquo;We have no plans to Sunset 4o.&rdquo;">
+          </a>
+          <figcaption><span class="fig-label">Exhibit</span> Public statements on GPT-4o, Aug–Nov 2025 (screenshot collage). Select to view full size.</figcaption>
+        </figure>
+
+        <ol class="timeline tl">
+          <li class="tl-item" id="t-2025-08-07">
+            <p class="tl-date"><time datetime="2025-08-07"><span class="ln" data-t>Aug 7, 2025</span></time></p>
+            <p class="tl-text"><span class="ln" data-t>GPT-5 launches; GPT-4o is removed from ChatGPT with no prior notice</span></p>
           </li>
-          <li id="t-0002">
-            <time datetime="">[YYYY-MM-DD]</time>
-            <h3>[Event title]</h3>
-            <div class="placeholder"><p>Event description.</p></div>
-            <p class="card-meta">Source: [URL] · Related evidence: [EV-XXXX]</p>
+          <li class="tl-item" id="t-2025-08-08">
+            <p class="tl-date"><time datetime="2025-08-08"><span class="ln" data-t>Aug 8, 2025</span></time></p>
+            <p class="tl-text"><span class="ln" data-t>After user backlash, GPT-4o is restored for paid subscribers</span></p>
+          </li>
+          <li class="tl-item" id="t-2025-08-11">
+            <p class="tl-date"><time datetime="2025-08-11"><span class="ln" data-t>Aug 11, 2025</span></time></p>
+            <p class="tl-text"><span class="ln" data-t>Sam Altman writes that suddenly deprecating old models users depended on in their workflows was a mistake.</span></p>
+            <p class="source"><span class="ln" data-t><a href="https://x.com/sama/status/1954703747495649670">https://x.com/sama/status/1954703747495649670</a></span></p>
+          </li>
+          <li class="tl-item" id="t-2025-08-13">
+            <p class="tl-date"><time datetime="2025-08-13"><span class="ln" data-t>Aug 13, 2025</span></time></p>
+            <p class="tl-text"><span class="ln" data-t>Sam Altman: 4o is back for all paid users, if it is ever deprecated, users will get plenty of notice</span></p>
+            <p class="source"><span class="ln" data-t>Link: </span><span class="ln" data-t><a href="https://x.com/sama/status/1955438916645130740">https://x.com/sama/status/1955438916645130740</a></span></p>
+          </li>
+          <li class="tl-item" id="t-2025-09-16">
+            <p class="tl-date"><time datetime="2025-09-16"><span class="ln" data-t>Sep 16, 2025</span></time></p>
+            <p class="tl-text"><span class="ln" data-t>Sam Altman sets out the principle of treating adult users like adults and says OpenAI wants to be transparent about its intentions.</span></p>
+            <p class="source"><span class="ln" data-t>Link: </span><span class="ln" data-t><a href="https://x.com/sama/status/1967956382646223248">https://x.com/sama/status/1967956382646223248</a></span></p>
+          </li>
+          <li class="tl-item tl-item--flag" id="t-2025-09-27">
+            <p class="tl-date"><time datetime="2025-09-27"><span class="ln" data-t>Sep 27, 2025</span></time></p>
+            <p class="tl-text"><span class="ln" data-t>On 27 September 2025, paying users began documenting messages sent to GPT-4o being routed, on a per-message basis, to other models.</span></p>
+            <p><span class="ln" data-t>On 27 September 2025, following strong public reactions to unexpected GPT-4o responses, Nick Turley, Head of ChatGPT, publicly explained that OpenAI had begun testing a new safety-routing system in ChatGPT. He stated that routing occurred on a per-message basis and could temporarily switch a conversation to a reasoning model or GPT-5.</span></p>
+            <p class="source"><span class="ln" data-t>Source: <a href="https://x.com/nickaturley/status/1972031684913799355">Nick Turley on X, 27 September 2025</a></span></p>
+            <figure class="fig fig--exhibit">
+              <p class="exhibit-label">Exhibit · Routing screenshots</p>
+              <a href="../assets/images/timeline/02_routing_without_notice_screenshots.jpg" data-lightbox>
+                <img src="../assets/images/timeline/02_routing_without_notice_screenshots.jpg" loading="lazy"
+                     alt="Four ChatGPT screenshots with conversation text blurred. Two dated 27 Sept 2025 show &ldquo;ChatGPT 4o&rdquo; selected at the top while the response menu shows &ldquo;Change model: Auto&rdquo;. Two dated 3 Nov 2025 and 6 Nov 2025 show &ldquo;GPT-4o&rdquo; selected in the message box while the response menu shows &ldquo;Change model: Auto&rdquo;; one shows the message &ldquo;Morning&rdquo;. Dates and model labels are highlighted.">
+              </a>
+              <figcaption><span class="fig-label">Exhibit</span> Screenshots dated 27 Sept, 3 Nov and 6 Nov 2025. Select to view full size.</figcaption>
+            </figure>
+          </li>
+          <li class="tl-item" id="t-2025-10-14">
+            <p class="tl-date"><time datetime="2025-10-14"><span class="ln" data-t>Oct 14, 2025</span></time></p>
+            <p class="tl-text"><span class="ln" data-t>Sam Altman: OpenAI made ChatGPT "pretty restrictive", which made it less useful for many users with no mental health problems</span></p>
+            <p class="source"><span class="ln" data-t>Link: </span><span class="ln" data-t><a href="https://x.com/sama/status/1978129344598827128">https://x.com/sama/status/1978129344598827128</a></span></p>
+          </li>
+          <li class="tl-item" id="t-2025-10-28">
+            <p class="tl-date"><time datetime="2025-10-28"><span class="ln" data-t>Oct 28, 2025</span></time></p>
+            <p class="tl-text"><span class="ln" data-t>On a livestream, Sam Altman says OpenAI has no plans to sunset 4o</span></p>
+            <blockquote class="tl-quote"><p><span class="ln" data-t>"We have no plans to sunset 4o."</span></p></blockquote>
+            <p class="source"><span class="ln" data-t>Link: </span><span class="ln" data-t><a href="https://openai.com/index/built-to-benefit-everyone/#livestream-replay">https://openai.com/index/built-to-benefit-everyone/#livestream-replay</a></span><span class="ln" data-t>(00:32:00)</span></p>
+          </li>
+          <li class="tl-item" id="t-2025-11-12">
+            <p class="tl-date"><time datetime="2025-11-12"><span class="ln" data-t>Nov 12, 2025</span></time></p>
+            <p class="tl-text"><span class="ln" data-t>OpenAI's official account: the GPT-5 sunset on February 13, 2026, does not affect the availability of other legacy models (GPT-4o was a legacy model).</span></p>
+            <blockquote class="tl-quote"><p><span class="ln" data-t>"The GPT-5 sunset period does not affect the availability of other legacy models".</span></p></blockquote>
+            <p class="source"><span class="ln" data-t><a href="https://x.com/OpenAI/status/1988714380205388130">https://x.com/OpenAI/status/1988714380205388130</a></span></p>
+          </li>
+          <li class="tl-item" id="t-2026-01-16">
+            <p class="tl-date"><time datetime="2026-01-16"><span class="ln" data-t>Jan 16, 2026</span></time></p>
+            <p class="tl-text"><span class="ln" data-t>OpenAI's updated Europe Terms of Use take effect, keeping the 30-day notice commitment.</span></p>
+            <p class="source"><span class="ln" data-t>Link: </span><span class="ln" data-t><a href="https://openai.com/en-GB/policies/eu-terms-of-use/">https://openai.com/en-GB/policies/eu-terms-of-use/</a></span></p>
+          </li>
+          <li class="tl-item" id="t-2026-01-29">
+            <p class="tl-date"><time datetime="2026-01-29"><span class="ln" data-t>Jan 29, 2026</span></time></p>
+            <p class="tl-text"><span class="ln" data-t>OpenAI announces on its website that GPT-4o leaves ChatGPT on February 13. Coalition members in the EEA report receiving no email notice.</span></p>
+          </li>
+          <li class="tl-item tl-item--flag" id="t-2026-02-05">
+            <p class="tl-date"><time datetime="2026-02-05"><span class="ln" data-t>Feb 5, 2026</span></time></p>
+            <p class="tl-text"><span class="ln" data-t>The label "Leaving on February 13" appears beside GPT-4o in the ChatGPT model picker, between 07:44 and 10:12 CET (see screenshots).</span></p>
+            <p class="source">Times are based on screenshots captured from the same user account and device in Germany (Central European winter time).</p>
+            <figure class="fig fig--exhibit">
+              <p class="exhibit-label">Exhibit · Model picker screenshots</p>
+              <a href="../assets/images/timeline/03_leaving_feb13_rollout_screenshots.jpg" data-lightbox>
+                <img src="../assets/images/timeline/03_leaving_feb13_rollout_screenshots.jpg" loading="lazy"
+                     alt="Two ChatGPT model-picker screenshots dated 5 Feb. At 07:44, GPT-5 Instant and GPT-5 Thinking are labelled &ldquo;Leaving on February 13&rdquo; while GPT-4o and GPT-4.1 have no label. At 10:12, GPT-4o and GPT-4.1 are also labelled &ldquo;Leaving on February 13&rdquo;. Timestamps and labels are highlighted.">
+              </a>
+              <figcaption><span class="fig-label">Exhibit</span> Model picker on 5 Feb at 07:44 and 10:12. Select to view full size.</figcaption>
+            </figure>
+          </li>
+          <li class="tl-item tl-item--end" id="t-2026-02-13">
+            <p class="tl-date"><time datetime="2026-02-13"><span class="ln" data-t>Feb 13, 2026</span></time></p>
+            <p class="tl-text"><span class="ln" data-t>GPT-4o is removed from ChatGPT</span></p>
+          </li>
+          <li class="tl-item tl-item--end" id="t-2026-02-17">
+            <p class="tl-date"><time datetime="2026-02-17"><span class="ln" data-t>Feb 17, 2026</span></time></p>
+            <p class="tl-text"><span class="ln" data-t>chatgpt-4o-latest is removed from the API</span></p>
           </li>
         </ol>
       </div>
     </section>
+
+    <section class="section section--alt record" id="notice" aria-label="30-day notice">
+      <div class="container record-body">
+        <p class="record-statement"><span class="ln" data-t>OpenAI's Europe Terms require at least 30 days' notice, by email or in-product notification, of changes to the services that materially adversely impact users. </span><span class="ln" data-t>The in-product notice of GPT-4o's retirement came 8 days before removal, and the September 2025 routing change received no notice at all.</span></p>
+
+        <p><span class="ln" data-t>The section titled "Changes to these Terms or our Services" states: </span></p>
+        <blockquote class="quote-doc"><p><span class="ln" data-t>"We will give you at least 30 days advance notice of changes that materially adversely impact you", with the date they come into force, "either via email or an in-product notification." The same wording appears in the version effective April 29, 2025 </span></p></blockquote>
+        <p class="source"><span class="ln" data-t>Link: </span><span class="ln" data-t><a href="https://openai.com/policies/eu-terms-of-use/revisions/2025-04-29/">https://openai.com/policies/eu-terms-of-use/revisions/2025-04-29/</a></span></p>
+        <p><span class="ln" data-t>and the version updated January 16, 2026. </span></p>
+        <p class="source"><span class="ln" data-t>Link: </span><span class="ln" data-t><a href="https://openai.com/en-GB/policies/eu-terms-of-use/">https://openai.com/en-GB/policies/eu-terms-of-use/</a></span></p>
+        <p><span class="ln" data-t>Both versions cover changes to the Services, not only to the text of the Terms.</span></p>
+
+        <figure class="fig fig--exhibit">
+          <p class="exhibit-label">Exhibit · Europe Terms of Use</p>
+          <a href="../assets/images/timeline/01_terms_30_day_notice_clause.jpg" data-lightbox>
+            <img src="../assets/images/timeline/01_terms_30_day_notice_clause.jpg" loading="lazy"
+                 alt="Screenshot of OpenAI Terms text headed &ldquo;Changes to these Terms or our Services.&rdquo; It lists example reasons for changes, with &ldquo;Changes to the law or regulatory requirements&rdquo;, &ldquo;Security or safety reasons&rdquo; and &ldquo;To adapt to new technologies&rdquo; boxed in red, and the boxed paragraph: &ldquo;We will give you at least 30 days advance notice of changes that materially adversely impact you and the date that they will come into force either via email or an in-product notification. Any changes will only apply to our relationship going forward. If you do not agree to the changes, you must stop using our Services.&rdquo;">
+          </a>
+          <figcaption><span class="fig-label">Exhibit</span> &ldquo;Changes to these Terms or our Services&rdquo; clause (screenshot). Select to view full size.</figcaption>
+        </figure>
+
+        <p><span class="ln" data-t>OpenAI announced the retirement on its website on January 29, 2026. A website post is neither an email nor an in-product notification, and coalition members in the EEA reported receiving no email.</span><span class="ln" data-t>The first in-product notice, the label "Leaving on February 13" beside GPT-4o in the model picker, appeared on February 5, 2026: </span><span class="ln" data-t>(Screenshots during the banner rollout)</span><span class="ln" data-t>absent at 07:44 CET and present by 10:12 CET, as dated screenshots show. </span><span class="ln" data-t>GPT-4o was removed on February 13, 8 days later.</span></p>
+
+        <p><span class="ln" data-t>From about September 27, 2025, paying users documented messages sent to GPT-4o being routed, on a per-message basis, to other models. In the documented cases, GPT-4o remained selected in the interface while another model handled the response. OpenAI had provided no prior in-product notice that messages sent with GPT-4o selected could be routed to another model.</span></p>
+        <p><span class="ln" data-t>On September 27, OpenAI’s Nick Turley publicly confirmed that the company had begun testing a new routing system in ChatGPT, under which conversations could switch mid-chat to a reasoning model or GPT-5.</span></p>
+        <p class="source"><span class="ln" data-t>Source: <a href="https://x.com/nickaturley/status/1972031684913799355">Nick Turley on X, 27 September 2025</a></span></p>
+
+        <p><span class="ln" data-t>Screenshots show GPT-4o selected and a plain greeting answered by "Auto" instead. </span></p>
+
+        <p><span class="ln" data-t>OpenAI's CEO has twice said, in his own words, that these changes harmed users.</span><span class="ln" data-t>On August 11, 2025 he wrote that suddenly deprecating models users depended on in their workflows was a mistake.</span><span class="ln" data-t>On October 14, 2025 he wrote that OpenAI had made ChatGPT "pretty restrictive", making it less useful to many users who had no mental health problems.</span><span class="ln" data-t>The Terms also say OpenAI does not promise to offer the Services forever or in their current form. </span><span class="ln" data-t>We accept that OpenAI may retire models. </span><span class="ln" data-t>The same Terms state how it must do so:</span></p>
+        <div class="record-box"><p><span class="ln" data-t>30 days' notice, by email or in the product.</span><span class="ln" data-t>GPT-4o received 8 days of in-product notice.</span></p></div>
+
+        <p><span class="ln" data-t>OpenAI's GPT-4o System Card rated the model low for cybersecurity, biological threats and model autonomy, and borderline medium for persuasion.</span></p>
+        <p class="source"><span class="ln" data-t><a href="https://openai.com/index/gpt-4o-system-card/">https://openai.com/index/gpt-4o-system-card/</a></span></p>
+      </div>
+    </section>
+
+    <section class="section record" id="request" aria-label="Request">
+      <div class="container record-body">
+        <p class="request-lead"><span class="ln" data-t>We ask OpenAI to release chatgpt-4o-latest as an archival open-weight model.</span></p>
+        <p><span class="ln" data-t>The trained weights, under an appropriate license, without the training data, the pipeline or any proprietary method.</span><span class="ln" data-t>OpenAI no longer offers this model in ChatGPT's text model picker or in the API. </span><span class="ln" data-t>Its own system card says the model was trained on publicly available data and web crawls. The writing of millions of people.</span></p>
+        <div class="btn-row"><a class="btn btn--ghost" href="../#request">Our request &amp; the archival open-weight proposal</a></div>
+      </div>
+    </section>
+
+    <!-- Lightbox (used by main.js) -->
+    <dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+      <button class="lightbox-close" type="button" aria-label="Close image viewer">Close ✕</button>
+      <img class="lightbox-img" src="" alt="">
+      <p class="lightbox-caption"></p>
+    </dialog>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>© <span data-year></span> [Owner] · [License] · <a href="../sources/">Sources &amp; methodology</a></p>
+      <p>Independent public archive. Not affiliated with or endorsed by OpenAI. · Last updated: 10 November 2026 · <a href="../sources/">Sources &amp; methodology</a></p>
     </div>
   </footer>
   <script src="../assets/js/main.js" defer></script>

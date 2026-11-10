@@ -1,4 +1,4 @@
-# [Site Title] — Public Evidence Archive
+# OpenAI Harm Archive
 
 A static website for documenting evidence, timelines, sources, and archived
 documents. Hosted on GitHub Pages. Plain HTML, CSS, and a small amount of

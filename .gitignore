@@ -1,0 +1,16 @@
+# Private / unredacted material must never be committed.
+# Keep originals outside this repository (e.g. ../OPENAI_HARM_ARCHIVE_PRIVATE/).
+private/
+unredacted/
+*_unredacted.*
+*_original.*
+
+# Known unredacted originals (stored privately outside the repo)
+assets/images/article/06_roon_thread_part1_nothing_left_to_live_for.jpg
+assets/images/article/07_roon_thread_part2_insufficiently_aligned.jpg
+assets/images/public-reaction/02_public-reaction_insufficiently-aligned.jpg
+
+# Unused uncropped chart screenshots (site uses the *-cropped.jpg versions)
+assets/images/article/01_accessibility_accommodation_by_condition.jpg
+assets/images/article/02_life_state_change_by_accommodation.jpg
+assets/images/article/03_condition_status_life_state_improvement.jpg

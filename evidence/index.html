@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Evidence — [Site Title]</title>
+  <title>Evidence — OpenAI Harm Archive</title>
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="site-title" href="../">[Site Title]</a>
+      <a class="site-title" href="../">OPENAI HARM ARCHIVE</a>
       <div class="header-actions">
         <button class="theme-toggle" type="button">Dark mode</button>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
@@ -32,7 +32,7 @@
       <div class="container">
         <p class="eyebrow">Section</p>
         <h1>Evidence</h1>
-        <div class="placeholder"><p>Introduction to the evidence index: what qualifies as an evidence item and how items are verified.</p></div>
+        <p class="intro-text">This index collects the principal evidence used throughout the archive. Each item identifies the source category, relevant date where known, a concise description of what the source documents, and a link to the underlying material.</p>
       </div>
     </section>
 
@@ -45,35 +45,58 @@
           <label>Category
             <select data-filter-category>
               <option value="">All categories</option>
-              <option value="category-a">[Category A]</option>
-              <option value="category-b">[Category B]</option>
+              <option value="foreseeability">Foreseeability</option>
+              <option value="accessibility">Accessibility / functioning</option>
+              <option value="lifecycle">Platform / lifecycle</option>
+              <option value="community">Community record</option>
+              <option value="testimony">Testimony</option>
+              <option value="preservation">Preservation</option>
             </select>
           </label>
         </div>
 
         <!--
-          EVIDENCE ITEM TEMPLATE — copy one <article> per item.
-          Required: id, title, date, category, original source URL, archived copy URL.
+          EVIDENCE ITEM TEMPLATE: copy one <article> per item.
+          Required: id (ev-XXXX), category, date only if established (otherwise "See source"),
+          description, link to the underlying material.
           data-search: keywords used by the filter. data-category: matches a <select> option value.
         -->
         <div class="grid" data-filter-list>
-          <article class="card" id="ev-0001" data-search="[keywords]" data-category="category-a">
-            <p class="card-meta">EV-0001 · [Category A] · [YYYY-MM-DD]</p>
-            <h3>[Evidence item title]</h3>
-            <div class="placeholder"><p>Neutral summary of what the source shows.</p></div>
-            <div class="card-links">
-              <span>[Original source — URL]</span>
-              <span>[Archived copy — URL]</span>
-            </div>
+          <article class="card" id="ev-0001" data-search="foreseeability deprecation instructions distress anxiety anger loss abandonment emotional reliance" data-category="foreseeability">
+            <p class="card-meta">EV-0001 · Foreseeability · See source</p>
+            <h3>OpenAI anticipated distress from GPT-4o’s removal</h3>
+            <p>GPT-4o deprecation instructions explicitly anticipated anxiety, anger and emotional distress associated with losing access and addressed fears of loss, abandonment and emotional reliance.</p>
+            <div class="card-links"><a href="../#exhibit-deprecation">View exhibit in the Preservation Record →</a></div>
           </article>
-          <article class="card" id="ev-0002" data-search="[keywords]" data-category="category-b">
-            <p class="card-meta">EV-0002 · [Category B] · [YYYY-MM-DD]</p>
-            <h3>[Evidence item title]</h3>
-            <div class="placeholder"><p>Neutral summary of what the source shows.</p></div>
-            <div class="card-links">
-              <span>[Original source — URL]</span>
-              <span>[Archived copy — URL]</span>
-            </div>
+          <article class="card" id="ev-0002" data-search="accessibility functioning survey disability routing substitution" data-category="accessibility">
+            <p class="card-meta">EV-0002 · Accessibility / functioning · See source</p>
+            <h3>GPT-4o Accessibility Impact Survey</h3>
+            <p>Structured research documenting reported accessibility use, functional benefit, routing effects and attempted substitution.</p>
+            <div class="card-links"><a href="../sources/#src-0002">Source entry →</a></div>
+          </article>
+          <article class="card" id="ev-0003" data-search="platform lifecycle timeline statements routing retirement notice removal" data-category="lifecycle">
+            <p class="card-meta">EV-0003 · Platform / lifecycle · 7 Aug 2025 – 17 Feb 2026</p>
+            <h3>Documented GPT-4o retirement timeline</h3>
+            <p>Public statements, routing changes, retirement announcements, notice and removal are preserved chronologically.</p>
+            <div class="card-links"><a href="../timeline/">View the timeline →</a></div>
+          </article>
+          <article class="card" id="ev-0004" data-search="community keep4o public discourse analysis computational posts" data-category="community">
+            <p class="card-meta">EV-0004 · Community record · Covers Aug 2025 – Mar 2026</p>
+            <h3>Large-scale #Keep4o public-discourse analysis</h3>
+            <p>Computational analysis of 61,846 public #Keep4o posts examining platform lifecycle decisions, model experience, trusted relationships, substitution failure and accountability.</p>
+            <div class="card-links"><a href="../sources/#src-0001">Source entry →</a></div>
+          </article>
+          <article class="card" id="ev-0005" data-search="testimony resonance library first-person accounts" data-category="testimony">
+            <p class="card-meta">EV-0005 · Testimony · See source</p>
+            <h3>GPT-4o Resonance Library</h3>
+            <p>Public archive containing 1,380+ first-person testimonials / documented stories about users’ experiences with GPT-4o.</p>
+            <div class="card-links"><a href="../sources/#src-0003">Source entry →</a></div>
+          </article>
+          <article class="card" id="ev-0006" data-search="preservation record zenodo archival open-weight release" data-category="preservation">
+            <p class="card-meta">EV-0006 · Preservation · See source</p>
+            <h3>GPT-4o Preservation Record</h3>
+            <p>Archived preservation record documenting the community request for archival/open-weight release and supporting material.</p>
+            <div class="card-links"><a href="https://zenodo.org/records/23454073">Open on Zenodo →</a><a href="../sources/#src-0004">Source entry</a></div>
           </article>
         </div>
       </div>
@@ -82,7 +105,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>© <span data-year></span> [Owner] · [License] · <a href="../sources/">Sources &amp; methodology</a></p>
+      <p>Independent public archive. Not affiliated with or endorsed by OpenAI. · Last updated: 10 November 2026 · <a href="../sources/">Sources &amp; methodology</a></p>
     </div>
   </footer>
   <script src="../assets/js/main.js" defer></script>
