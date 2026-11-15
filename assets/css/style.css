@@ -255,6 +255,38 @@ th { font-family: var(--font-mono); font-size: .75rem; text-transform: uppercase
 .safety-harm-callout p { font-family: var(--font-serif); font-size: clamp(1.1rem, 2.2vw, 1.35rem); line-height: 1.5; }
 .safety-harm-callout p + p { margin-top: .75rem; }
 
+/* ---------- Disrupted Companionship study (homepage) ---------- */
+.disruption .section-head h2 { font-size: clamp(1.35rem, 3vw, 2rem); max-width: 34ch; }
+.disruption-body { margin-bottom: 0; }
+.disruption-body .record-statement { margin: 1.25rem 0 1.5rem; }
+.disruption-body .pull { margin: 2rem 0; }
+.stat-grid {
+  display: grid; gap: 1rem; margin: 1.25rem 0 2rem; max-width: 52rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+}
+.stat-grid--four { max-width: none; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); }
+.stat-grid--two { max-width: 40rem; }
+.stat { gap: .25rem; padding: 1rem 1.25rem; }
+.stat p { margin: 0; }
+.stat-label { font-family: var(--font-mono); font-size: .78rem; text-transform: uppercase; letter-spacing: .1em; font-weight: 700; color: var(--text-muted); }
+.stat-value { font-family: var(--font-serif); font-weight: 700; line-height: 1.1; font-size: clamp(1.7rem, 4.5vw, 2.4rem); overflow-wrap: anywhere; }
+.stat-unit { font-size: .5em; font-family: var(--font-mono); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+.stat-note { font-size: .85rem; color: var(--text-muted); }
+.stat--accent { border-top-color: var(--accent); }
+.stat--accent .stat-value { color: var(--accent); }
+.disruption-gallery-title { margin: 2.5rem 0 1.25rem; }
+.research-gallery {
+  display: grid; gap: 1.5rem; align-items: start; margin-bottom: 2.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 24rem), 1fr));
+}
+.research-gallery .fig { margin: 0; min-width: 0; }
+/* never upscale a screenshot beyond its real size */
+.research-gallery .fig img { width: auto; max-width: 100%; height: auto; margin: 0 auto; }
+.disruption-callout { margin-top: 0; margin-bottom: 2rem; }
+.disruption-ask { margin-bottom: 2rem; }
+.disruption-ask .source { display: inline-block; }
+.disruption-source { margin-bottom: 0; }
+
 /* ---------- User testimonies (homepage) ---------- */
 /* One .testimony per story; its screenshots stay together and are never cropped. */
 .testimonies-meta { margin: -1rem 0 1.75rem; }
