@@ -70,6 +70,9 @@
         boxImg.src = link.getAttribute("href");
         boxImg.alt = img ? img.alt : "";
         boxCap.textContent = cap ? cap.textContent.replace(/\s+/g, " ").trim() : "";
+        // Tall screenshots: show at readable width and let the dialog scroll.
+        box.classList.toggle("lightbox--scroll", link.hasAttribute("data-lightbox-scroll"));
+        box.scrollTop = 0;
         lastTrigger = link;
         box.showModal();
       });

@@ -239,6 +239,61 @@ th { font-family: var(--font-mono); font-size: .75rem; text-transform: uppercase
 .gallery-item a:hover img { opacity: .85; }
 .gallery-item figcaption { padding: 1rem 1.25rem; font-size: .9rem; display: flex; flex-direction: column; gap: .35rem; }
 
+/* ---------- User testimonies (homepage) ---------- */
+/* One .testimony per story; its screenshots stay together and are never cropped. */
+.testimonies-meta { margin: -1rem 0 1.75rem; }
+.testimonies .note p { max-width: 80ch; }
+.testimonies .note { background: var(--bg); }
+.testimony-list { display: grid; gap: 2rem; grid-template-columns: minmax(0, 1fr); }
+.testimony {
+  background: var(--surface); border: 1px solid var(--rule);
+  border-top: 3px solid var(--rule-strong); padding: 1.25rem;
+}
+.testimony-head {
+  display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between;
+  gap: .25rem 1rem; margin-bottom: 1rem; padding-bottom: .75rem; border-bottom: 1px solid var(--rule);
+}
+.testimony-head h3, .testimony-head p { margin: 0; }
+.testimony-nav { margin-bottom: 2rem; }
+.testimony { scroll-margin-top: 5rem; min-width: 0; }
+.testimony-note {
+  font-size: .9rem; color: var(--text-muted); max-width: none;
+  border-left: 3px solid var(--text-muted); padding-left: .75rem; margin-bottom: 1rem;
+}
+.testimony-part {
+  font-family: var(--font-mono); font-size: .8rem; text-transform: uppercase; letter-spacing: .1em;
+  margin: 1.5rem 0 .75rem; padding-top: .75rem; border-top: 1px solid var(--rule-strong);
+}
+.testimony-note + .testimony-part { margin-top: 0; }
+.testimony-hint { display: none; font-size: .8rem; color: var(--text-muted); margin: 0 0 .5rem; }
+.testimony-shots {
+  display: grid; gap: 1.25rem; align-items: start;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+}
+.shot { margin: 0; }
+.shot > a { display: block; border: 1px solid var(--rule); background: #fff; }
+.shot img { display: block; width: 100%; height: auto; }
+.shot > a:hover img { opacity: .9; }
+.shot-open { font-size: .85rem; font-weight: 600; margin: .5rem 0 0; }
+.shot figcaption { font-size: .85rem; color: var(--text-muted); margin-top: .25rem; line-height: 1.5; }
+/* Phones: each story becomes one sideways strip, so its screenshots stay together. */
+@media (max-width: 640px) {
+  .testimony { padding: 1rem; }
+  .testimony-hint { display: block; }
+  .testimony-shots {
+    display: flex; overflow-x: auto; scroll-snap-type: x mandatory;
+    gap: 1rem; padding-bottom: .75rem; -webkit-overflow-scrolling: touch;
+  }
+  .testimony-shots .shot { flex: 0 0 88%; scroll-snap-align: start; }
+  .testimony-shots .shot:only-child { flex-basis: 100%; }
+}
+@media print { .testimony-shots { display: block; } .shot { margin-bottom: 1rem; break-inside: avoid; } }
+
+/* Lightbox variant for tall screenshots: full readable width, scrolls vertically. */
+.lightbox--scroll { max-width: min(96vw, 40rem); overflow-y: auto; }
+.lightbox--scroll .lightbox-img { max-height: none; width: 100%; }
+.lightbox--scroll .lightbox-close { position: sticky; top: 0; }
+
 /* ---------- Lightbox ---------- */
 .lightbox {
   border: 2px solid var(--rule-strong); background: var(--bg); color: var(--text);
