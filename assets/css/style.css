@@ -239,6 +239,22 @@ th { font-family: var(--font-mono); font-size: .75rem; text-transform: uppercase
 .gallery-item a:hover img { opacity: .85; }
 .gallery-item figcaption { padding: 1rem 1.25rem; font-size: .9rem; display: flex; flex-direction: column; gap: .35rem; }
 
+/* ---------- When safety itself causes harm (homepage) ---------- */
+.grid--two { grid-template-columns: repeat(auto-fill, minmax(min(100%, 26rem), 1fr)); margin: 2.5rem 0; }
+.safety-harm .card p { max-width: none; }
+.safety-harm .card .source { margin: auto 0 0; }
+.safety-harm .card .source a { word-break: normal; overflow-wrap: anywhere; }
+.safety-harm-body ul { margin: -.25rem 0 1.25rem; padding-left: 1.25rem; }
+.safety-harm-body li { margin-bottom: .35rem; }
+.safety-harm-body .pull { margin: 1.5rem 0 2.5rem; }
+.safety-harm-sources { display: grid; gap: 1.25rem; margin-bottom: 2.5rem; }
+.safety-harm-sources .src-cat-title { margin: 0; }
+.safety-harm-sources .src-card h4 { margin-top: .75rem; }
+.src-card--supplementary { border-top-style: dashed; }
+.safety-harm-callout { max-width: 52rem; margin-bottom: 0; }
+.safety-harm-callout p { font-family: var(--font-serif); font-size: clamp(1.1rem, 2.2vw, 1.35rem); line-height: 1.5; }
+.safety-harm-callout p + p { margin-top: .75rem; }
+
 /* ---------- User testimonies (homepage) ---------- */
 /* One .testimony per story; its screenshots stay together and are never cropped. */
 .testimonies-meta { margin: -1rem 0 1.75rem; }

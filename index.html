@@ -755,6 +755,111 @@ And when the harm is already documented, proceeding anyway is a choice too.</p>
       </div>
     </section>
 
+    <!-- 3a. WHEN SAFETY ITSELF CAUSES HARM
+         Three kinds of source are used here and must stay visibly distinct:
+         peer-reviewed research (the four cards), official OpenAI documentation,
+         and one independent, non-peer-reviewed investigation (supplementary only). -->
+    <section class="section safety-harm" id="safety-harm" aria-labelledby="safety-harm-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="safety-harm-title">WHEN SAFETY ITSELF CAUSES HARM</h2>
+          <span class="tag">Research evidence</span>
+        </div>
+
+        <p class="intro-text">“Safety” is not a magic word that makes consequences disappear.</p>
+        <p class="intro-text">A growing body of research shows that AI safety interventions can create harms of their own: harmless requests are refused, useful information is withheld, users experience greater frustration and psychological reactance, trust declines, and abrupt changes in how an AI responds can disrupt an established interaction.</p>
+        <p class="intro-text">A system designed to prevent harm must therefore be evaluated for the harm it creates as well as the harm it prevents.</p>
+
+        <div class="grid grid--two">
+          <article class="card" id="safety-harm-1">
+            <p class="card-meta">Peer-reviewed research · ICML 2025</p>
+            <h3>SAFETY ALIGNMENT CAN MAKE SYSTEMS REFUSE HARMLESS REQUESTS</h3>
+            <p>Research presented at ICML 2025 examined 32 language models using OR-Bench, a dataset containing 80,000 safe prompts deliberately designed to expose over-refusal.</p>
+            <p>The researchers found a recurring trade-off: stronger rejection of harmful prompts often came at the cost of rejecting harmless ones.</p>
+            <p>This is not merely an inconvenience. When legitimate requests are incorrectly classified as dangerous, safety mechanisms reduce access to otherwise safe and useful information.</p>
+            <p class="source">Source: <a href="https://proceedings.mlr.press/v267/cui25a.html">OR-Bench: An Over-Refusal Benchmark for Large Language Models</a> ICML 2025</p>
+          </article>
+
+          <article class="card" id="safety-harm-2">
+            <p class="card-meta">Peer-reviewed research · EMNLP 2025</p>
+            <h3>HOW A SAFETY REFUSAL IS DELIVERED CAN MAKE THE USER EXPERIENCE SUBSTANTIALLY WORSE</h3>
+            <p>An EMNLP 2025 study involving 480 participants and 3,840 evaluated interactions found that flat refusals produced substantially more negative user reactions than responses that provided whatever safe information could still be given.</p>
+            <p>Partial compliance reduced negative user perceptions by more than 50% compared with direct refusal.</p>
+            <p>The study also found that current models rarely use this approach naturally and that reward models tend to undervalue it.</p>
+            <p>In other words: a system can satisfy a safety rule while still producing a worse outcome for the person interacting with it.</p>
+            <p class="source">Source: <a href="https://aclanthology.org/2025.findings-emnlp.630/">Let Them Down Easy! Contextual Effects of LLM Guardrails on User Perceptions and Preferences.</a> EMNLP 2025</p>
+          </article>
+
+          <article class="card" id="safety-harm-3">
+            <p class="card-meta">Peer-reviewed research · CHI 2026</p>
+            <h3>ABRUPT SAFETY INTERVENTIONS CAN INCREASE NEGATIVE EMOTIONS AND REDUCE TRUST</h3>
+            <p>A CHI 2026 experiment with 144 participants tested what happens when a voice AI changes the source or modality of a refusal.</p>
+            <p>When the interaction shifted away from the established AI agent or communication channel, participants reported more negative emotion and psychological reactance, while trust and social presence decreased.</p>
+            <p>The researchers also observed increased feelings of disruption and discomfort.</p>
+            <p>Their conclusion was explicit: the act of shifting away from the established communication source itself significantly affects the user experience.</p>
+            <p class="source">Source: <a href="https://pure.skku.edu/en/publications/how-and-who-should-refuse-harmful-requests-in-voice-interaction-i/">How and Who Should Refuse Harmful Requests in Voice Interaction? Identifying AI Refusal Strategies by Focusing on Shifts in Source and Modality</a> CHI 2026.</p>
+          </article>
+
+          <article class="card" id="safety-harm-4">
+            <p class="card-meta">Peer-reviewed research · Nature Human Behaviour, 2026</p>
+            <h3>FORCED MODEL CHANGES CAN PRODUCE MEASURABLE PSYCHOLOGICAL EFFECTS</h3>
+            <p>A 2026 peer-reviewed study in Nature Human Behaviour examined company-initiated AI changes as natural experiments, including ChatGPT’s GPT-5 rollout.</p>
+            <p>Across 54,861 posts and 1,452 participants, the ChatGPT change was associated with a 13-percentage-point increase in negative posts, increased sadness, increased negative mental-health language, loss framing, and stronger desires to restore the previous system.</p>
+            <p>The researchers concluded that company-initiated AI updates can disrupt user well-being.</p>
+            <p>Changing the conversational system is therefore not necessarily a neutral technical operation. For some users, continuity itself has measurable psychological value.</p>
+            <p class="source">Source: <a href="https://www.nature.com/articles/s41562-026-02569-3">Mourning the Loss of AI Companions.</a> Nature Human Behaviour, 2026</p>
+          </article>
+        </div>
+
+        <div class="record-body safety-harm-body">
+          <p>OpenAI has publicly confirmed that ChatGPT reroutes some sensitive conversations away from the model the user was interacting with and toward models it considers safer.</p>
+          <p>OpenAI described this as a safety measure.</p>
+          <p>But the existing research creates an obvious unanswered question.</p>
+          <p>We already know that:</p>
+          <ul>
+            <li>excessive safety filtering can incorrectly block harmless requests;</li>
+            <li>abrupt safety interventions can increase negative emotions and psychological reactance;</li>
+            <li>changing the established conversational source can reduce trust and social presence;</li>
+            <li>forced changes to conversational AI systems can produce measurable distress.</li>
+          </ul>
+          <p>OpenAI introduced a mechanism specifically into sensitive and emotionally significant conversations while the scientific literature already shows that abrupt intervention, source switching, refusals, and forced AI changes can themselves create negative effects.</p>
+          <p class="record-statement">Calling a mechanism “safety” does not answer whether that mechanism is safe.</p>
+
+          <p>A harm-prevention system does not get an exemption from harm assessment.</p>
+          <p>If an intervention can alter the model a person is speaking to, interrupt conversational continuity, misclassify harmless emotional interaction, reduce trust, or create distress, then its costs belong in the safety equation too.</p>
+          <p>The relevant question is:</p>
+          <blockquote class="pull"><p>WHAT HARM DID OPENAI MEASURE BEFORE DEPLOYING IT AND WHAT HARM IS IT MEASURING NOW?</p></blockquote>
+        </div>
+
+        <div class="safety-harm-sources">
+          <h3 class="src-cat-title">Source note: OpenAI rerouting</h3>
+          <article class="src-card">
+            <div class="src-meta"><span class="tag">Official company source</span><span class="src-type">OpenAI · 2 September 2025</span></div>
+            <h4>“Building more helpful ChatGPT experiences for everyone”</h4>
+            <p>OpenAI’s announcement confirming plans to route sensitive conversations to reasoning models.</p>
+            <div class="src-links"><a class="btn btn--small" href="https://openai.com/index/building-more-helpful-chatgpt-experiences-for-everyone/">View source <span class="src-host">openai.com</span></a></div>
+          </article>
+          <article class="src-card">
+            <div class="src-meta"><span class="tag">Official company source</span><span class="src-type">OpenAI · 27 October 2025</span></div>
+            <h4>“Strengthening ChatGPT’s responses in sensitive conversations”</h4>
+            <p>OpenAI’s update explicitly stating that sensitive conversations originating from other models are rerouted to safer models.</p>
+            <div class="src-links"><a class="btn btn--small" href="https://openai.com/index/strengthening-chatgpt-responses-in-sensitive-conversations/">View source <span class="src-host">openai.com</span></a></div>
+          </article>
+          <article class="src-card src-card--supplementary">
+            <div class="src-meta"><span class="tag">Supplementary evidence</span><span class="src-type">Independent investigation · Not peer-reviewed · September 2025 · Based on 48 observed interactions</span></div>
+            <h4>Independent GPT-5 Safety Router Investigation / Whitepaper</h4>
+            <p>The investigation reported server-side telemetry showing automatic switching to gpt-5-chat-safety and documented examples in which emotional or persona-oriented wording triggered routing even when the underlying task itself was benign.</p>
+            <div class="src-links"><a class="btn btn--small btn--ghost" href="https://lex-au.github.io/Whitepaper-GPT-5-Safety-Classifiers/">View source <span class="src-host">lex-au.github.io</span></a></div>
+          </article>
+        </div>
+
+        <div class="record-box safety-harm-callout">
+          <p>SAFETY CANNOT BE MEASURED ONLY BY WHAT A SYSTEM REFUSES TO DO.</p>
+          <p>IT MUST ALSO BE MEASURED BY WHAT THE INTERVENTION DOES TO THE HUMAN ON THE OTHER SIDE.</p>
+        </div>
+      </div>
+    </section>
+
     <!-- 3b. PUBLIC REACTION & DISCOURSE (secondary material, not primary evidence) -->
     <section class="section" aria-labelledby="reaction-title">
       <div class="container">
