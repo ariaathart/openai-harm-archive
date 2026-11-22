@@ -8,8 +8,10 @@ vanilla JavaScript — no frameworks, no npm, no build step.
 
 ```
 /
-├── index.html            Homepage (hero, intro, key evidence, timeline preview,
+├── index.html            Homepage (hero, lead section, intro, testimony archive card,
+│                         key evidence, timeline preview,
 │                         documents, methodology, closing, footer)
+├── testimonies/index.html Testimony screenshot archive (new entries first, then 01–10; one entry per post)
 ├── evidence/index.html   Evidence index (filterable cards, one per item)
 ├── timeline/index.html   Chronological timeline
 ├── documents/index.html  Archived / downloadable documents table

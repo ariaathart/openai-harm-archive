@@ -239,6 +239,39 @@ th { font-family: var(--font-mono); font-size: .75rem; text-transform: uppercase
 .gallery-item a:hover img { opacity: .85; }
 .gallery-item figcaption { padding: 1rem 1.25rem; font-size: .9rem; display: flex; flex-direction: column; gap: .35rem; }
 
+/* ---------- OpenAI knew (homepage lead section) ---------- */
+.knew .section-head h2 { font-size: clamp(1.6rem, 4vw, 2.6rem); max-width: 26ch; line-height: 1.15; }
+.knew-steps { list-style: none; margin: 2.5rem 0; padding: 0; display: grid; gap: 1.25rem; max-width: 52rem; counter-reset: knew; }
+.knew-step { counter-increment: knew; position: relative; padding: 1.25rem 1.5rem 1.25rem 3.75rem; background: var(--surface); border: 1px solid var(--rule-strong); border-left: 4px solid var(--accent); }
+.knew-step::before { content: counter(knew); position: absolute; left: 1.25rem; top: 1.15rem; font-family: var(--font-mono); font-weight: 700; font-size: 1.1rem; color: var(--accent); }
+.knew-step h3 { margin: .35rem 0 .9rem; }
+.knew-step p { max-width: none; }
+.knew-step .quote-doc { margin: .25rem 0 1rem; }
+.knew-step .source { margin-bottom: 0; }
+.knew-step .source a { word-break: normal; overflow-wrap: anywhere; }
+/* Primary-source evidence image inside a step: full step width on phones, capped on desktop so it stays readable but not oversized. Never cropped. */
+.knew-fig { margin: .5rem 0 1.25rem; max-width: 36rem; }
+.knew-fig img { width: 100%; height: auto; }
+.knew-fig figcaption a { color: var(--text); }
+.knew-point { font-family: var(--font-serif); font-weight: 700; font-size: 1.05rem; }
+.knew-list { margin: 0 0 1rem; padding-left: 1.25rem; }
+.knew-list li { margin-bottom: .35rem; }
+.knew-list code { overflow-wrap: anywhere; }
+.knew-body ul { margin: -.25rem 0 1.25rem; padding-left: 1.25rem; }
+.knew-body li { margin-bottom: .35rem; }
+.knew-body .record-statement { margin: 1.5rem 0; font-size: clamp(1.3rem, 2.8vw, 1.75rem); }
+.knew-sources { max-width: 52rem; margin: 2.5rem 0; }
+.knew-src-list { margin: 1rem 0 0; padding-left: 1.25rem; font-size: .95rem; }
+.knew-src-list li { margin-bottom: .4rem; }
+.knew-src-list a { overflow-wrap: anywhere; }
+.knew-callout { max-width: 52rem; margin-bottom: 0; }
+.knew-callout p { font-family: var(--font-serif); font-size: clamp(1.1rem, 2.2vw, 1.35rem); line-height: 1.5; }
+.knew-callout p + p { margin-top: .75rem; }
+@media (max-width: 40rem) {
+  .knew-step { padding: 1rem 1rem 1rem 2.75rem; }
+  .knew-step::before { left: .9rem; top: .95rem; }
+}
+
 /* ---------- When safety itself causes harm (homepage) ---------- */
 .grid--two { grid-template-columns: repeat(auto-fill, minmax(min(100%, 26rem), 1fr)); margin: 2.5rem 0; }
 .safety-harm .card p { max-width: none; }
@@ -336,6 +369,62 @@ th { font-family: var(--font-mono); font-size: .75rem; text-transform: uppercase
   .testimony-shots .shot:only-child { flex-basis: 100%; }
 }
 @media print { .testimony-shots { display: block; } .shot { margin-bottom: 1rem; break-inside: avoid; } }
+
+/* Homepage entry card for the testimony archive (compact; the collection itself is on testimonies/). */
+.testimony-entry {
+  display: grid; grid-template-columns: minmax(0, 1fr); gap: 0; max-width: 60rem;
+  background: var(--surface); border: 1px solid var(--rule-strong); border-top: 4px solid var(--accent);
+  color: var(--text); text-decoration: none;
+}
+.testimony-entry:hover, .testimony-entry:focus-visible { border-color: var(--accent); }
+.testimony-entry:hover .testimony-entry-cta { background: var(--accent); border-color: var(--accent); color: var(--accent-contrast); }
+.testimony-entry-thumbs {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .5rem;
+  padding: 1rem 1rem 0; height: 11rem; overflow: hidden;
+}
+.testimony-entry-thumbs img {
+  display: block; width: 100%; height: 100%; object-fit: cover; object-position: top;
+  border: 1px solid var(--rule); background: #fff;
+}
+.testimony-entry-body { padding: 1rem 1.25rem 1.25rem; }
+.testimony-entry-body h3 { margin: .35rem 0 .6rem; }
+.testimony-entry-body p { max-width: 70ch; }
+.testimony-entry-note { font-size: .9rem; color: var(--text-muted); }
+.testimony-entry-cta { display: inline-block; margin-top: .25rem; }
+@media (min-width: 48rem) {
+  .testimony-entry { grid-template-columns: 22rem minmax(0, 1fr); }
+  .testimony-entry-thumbs { height: auto; min-height: 15rem; padding: 1rem 0 1rem 1rem; }
+}
+
+/* Testimony archive page: with JS, each testimony is a compact card showing its first screenshot
+   as a preview (display only; the image file is not cropped) and a "View post" button that opens
+   every screenshot of that post in the viewer. Without JS, every screenshot is shown in full. */
+.testimony-archive--cards .testimony-list { grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr)); gap: 1.5rem; }
+.testimony-archive--cards .testimony { display: flex; flex-direction: column; }
+.testimony-archive--cards .testimony-shots:not(:first-of-type),
+.testimony-archive--cards .testimony-shots .shot:not(:first-child),
+.testimony-archive--cards .testimony-part,
+.testimony-archive--cards .testimony-hint { display: none; }
+.testimony-archive--cards .testimony-shots { display: block; overflow: visible; padding: 0; }
+.testimony-archive--cards .shot > a { position: relative; max-height: 20rem; overflow: hidden; }
+.testimony-archive--cards .shot > a::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 4rem;
+  background: linear-gradient(to bottom, rgba(255,255,255,0), #fff); pointer-events: none;
+}
+.testimony-archive--cards .shot figcaption { display: none; }
+.testimony-view { margin-top: auto; align-self: flex-start; }
+.testimony-archive--cards .shot { margin-bottom: 1rem; }
+
+/* Viewer: previous / next within one testimony */
+.lightbox-nav { display: flex; align-items: center; justify-content: space-between; gap: .75rem; margin: .75rem 0 0; }
+.lightbox-nav[hidden] { display: none; }
+.lightbox-prev, .lightbox-next {
+  font: inherit; font-size: .9rem; font-weight: 600; cursor: pointer;
+  background: var(--text); color: var(--bg); border: 0; padding: .5rem .9rem;
+}
+.lightbox-prev:disabled, .lightbox-next:disabled { opacity: .35; cursor: default; }
+.lightbox-count { font-family: var(--font-mono); font-size: .8rem; color: var(--text-muted); text-align: center; }
+.lightbox--scroll .lightbox-nav { position: sticky; bottom: 0; background: var(--bg); padding: .5rem 0; }
 
 /* Lightbox variant for tall screenshots: full readable width, scrolls vertically. */
 .lightbox--scroll { max-width: min(96vw, 40rem); overflow-y: auto; }
