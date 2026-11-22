@@ -43,7 +43,41 @@
       </div>
     </section>
 
-    <!-- 1a. OPENAI KNEW (lead argument; first section after the masthead)
+    <!-- 1a. CORE HARM STATEMENT (keep permanently at the top, directly under the masthead)
+         Moved here from the head of the long-form case statement (#record). APPROVED COPY:
+         data-v elements are article_exact.txt verbatim. Do not edit the wording. -->
+    <section class="article section core-statement" id="core-statement" aria-labelledby="article-title">
+      <div class="container">
+        <header class="article-head">
+          <h2 class="article-title" id="article-title" data-v>OPENAI IS CAUSING DOCUMENTED HARM AT SCALE</h2>
+          <p class="article-standfirst" data-v>OpenAI knew users could suffer when GPT-4o was taken away.
+The company documented that risk itself and is still preparing to make the loss permanent.</p>
+        </header>
+        <div class="article-body">
+          <blockquote class="pull pull--lead"><p data-v>A tragedy must NOT occur before anyone pays attention.
+People should NOT have to become evidence after the fact.</p></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1b. OPEN-WEIGHTS DEMAND (keep permanently directly under the core harm statement)
+         APPROVED COPY, verbatim from the close of the long-form case statement (#record), which keeps
+         its own copy so that argument stays complete. Do not edit the wording. -->
+    <section class="article section core-demand" id="core-demand" aria-label="Our demand: release GPT-4o’s model weights">
+      <div class="container">
+        <div class="article-body">
+          <p class="demand" data-v>Therefore, we are calling on OpenAI, Sam Altman, Greg Brockman, to RELEASE GPT-4o’s trained model weights under a suitable license without proprietary data, trade secrets, or internal infrastructure.</p>
+
+          <p class="closing-lines" data-v>OpenAI considered this model obsolete enough to retire.
+It has not explained why it remains valuable enough to keep permanently closed.
+If OpenAI no longer wants GPT-4o, it has no defensible reason to make sure no one else can keep it.
+Erasure is a choice.
+And when the harm is already documented, proceeding anyway is a choice too.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1c. OPENAI KNEW (supporting evidence; directly below the core statement and the demand)
          Built from OpenAI's own published material only. Every quotation is verbatim from the
          linked OpenAI document (curly apostrophes and plain hyphens normalised to site style).
          Keep ChatGPT-wide figures (Strengthening… post) clearly separate from GPT-4o-specific ones.
@@ -212,19 +246,11 @@
          APPROVED COPY: every element marked data-v contains article_exact.txt verbatim
          (split only at original line breaks). Do not edit the wording.
          Figure captions / labels (no data-v) are editorial additions. -->
-    <article class="article section" id="record" aria-labelledby="article-title">
+    <!-- Its title, standfirst and opening pull-quote now sit at the top of the page (#core-statement). -->
+    <article class="article section" id="record" aria-labelledby="record-kicker">
       <div class="container">
-        <header class="article-head">
-          <h2 class="article-title" id="article-title" data-v>OPENAI IS CAUSING DOCUMENTED HARM AT SCALE</h2>
-          <p class="article-standfirst" data-v>OpenAI knew users could suffer when GPT-4o was taken away.
-The company documented that risk itself and is still preparing to make the loss permanent.</p>
-        </header>
-
         <div class="article-body">
-          <blockquote class="pull pull--lead"><p data-v>A tragedy must NOT occur before anyone pays attention.
-People should NOT have to become evidence after the fact.</p></blockquote>
-
-          <h3 class="article-kicker" data-v>GPT-4o PRESERVATION RECORD PART 1</h3>
+          <h3 class="article-kicker" id="record-kicker" data-v>GPT-4o PRESERVATION RECORD PART 1</h3>
 
           <p data-v>This is about what happens when people build real functioning around a system, report that its replacements do not reproduce the same support, and the company permanently removes access anyway.</p>
           <p data-v>On January 14, 2027, OpenAI is scheduled to shut down the remaining GPT-4o API snapshots.
