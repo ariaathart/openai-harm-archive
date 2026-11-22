@@ -676,12 +676,23 @@ And when the harm is already documented, proceeding anyway is a choice too.</p>
           <p class="record-statement">HOW MUCH DID THE COMPANY DESTROY USERS’ ABILITY TO CONTINUE WHAT ALREADY EXISTED?</p>
           <p>For events classified as HIGH relational discontinuity, compared with LOW relational discontinuity, the immediate increases were:</p>
         </div>
-        <div class="stat-grid stat-grid--four">
-          <div class="card stat stat--accent"><p class="stat-label">SUICIDAL EXPRESSION</p><p class="stat-value">+45.6% <span class="stat-unit">odds</span></p></div>
-          <div class="card stat stat--accent"><p class="stat-label">LONELINESS</p><p class="stat-value">+35.2%</p></div>
-          <div class="card stat stat--accent"><p class="stat-label">STRESS</p><p class="stat-value">+12.3%</p></div>
-          <div class="card stat stat--accent"><p class="stat-label">DEPRESSION</p><p class="stat-value">+9.7%</p></div>
-        </div>
+        <!-- Horizontal bar chart: exact values as published (do not recalculate). Bar length = value / 50 (scale 0–50%).
+             Long bars (over ~60% of the scale) carry their value inside the bar, short bars just past the bar end. -->
+        <figure class="bar-chart">
+          <ul class="bar-rows">
+            <li class="bar-row"><span class="bar-label">SUICIDAL EXPRESSION</span><span class="bar-track"><span class="bar bar--inside" style="--v: 45.6"><span class="bar-value">+45.6% <span class="stat-unit">odds</span></span></span></span></li>
+            <li class="bar-row"><span class="bar-label">LONELINESS</span><span class="bar-track"><span class="bar bar--inside" style="--v: 35.2"><span class="bar-value">+35.2%</span></span></span></li>
+            <li class="bar-row"><span class="bar-label">STRESS</span><span class="bar-track"><span class="bar" style="--v: 12.3"><span class="bar-value">+12.3%</span></span></span></li>
+            <li class="bar-row"><span class="bar-label">DEPRESSION</span><span class="bar-track"><span class="bar" style="--v: 9.7"><span class="bar-value">+9.7%</span></span></span></li>
+          </ul>
+          <div class="bar-axis-row" aria-hidden="true">
+            <span class="bar-axis-spacer"></span>
+            <span class="bar-axis">
+              <span style="--t: 0">0%</span><span style="--t: 10">10%</span><span style="--t: 20">20%</span><span style="--t: 30">30%</span><span style="--t: 40">40%</span><span style="--t: 50">50%</span>
+            </span>
+          </div>
+          <figcaption class="bar-axis-title">Immediate increase (%) · scale 0–50%</figcaption>
+        </figure>
 
         <div class="record-body disruption-body">
           <p>Now here is the part OpenAI should read very carefully.</p>
